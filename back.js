@@ -21,6 +21,9 @@ const transporter = nodemailer.createTransport({
   },
   debug: true, // Add this line
   logger: true, // Add this line
+  tls: {
+    rejectUnauthorized: false, // Disable strict TLS checks
+},
 });
 
 // Endpoint to send email
